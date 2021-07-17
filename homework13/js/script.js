@@ -2,7 +2,7 @@ let number = +prompt('Введите число');
 let deg = +prompt('Введите степень возведения числа');
 
 function calculate(number, deg = 1) {
-    if (typeof(number) !== 'number' && typeof(deg) !== 'number') {
+    if (isNaN(number) && isNaN(deg)){
         return alert('some error');
     }
 
