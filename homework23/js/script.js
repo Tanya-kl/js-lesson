@@ -1,10 +1,10 @@
 // 1
 
 // function factorial(n){
-//     if (n===1  ||n===0 ){
+//     if (n===1||n===0 ){
 //         return 1;
 //     } else {
-//         return n * factorial( n -1);
+//         return n * factorial(n - 1);
 //     }
 // }
 // factorial(3)
@@ -24,10 +24,11 @@
 //3
 
 function sum(a, b){
-    for (let i = 0; i < a;i++)
-       if ( b === 0) break;
+       if ( b === 0)
+       return a;
 
-       return a
+       return sum(a + 1, b - 1);
+
 
 }
-sum();
+console.log (sum(5,5));
