@@ -1,21 +1,16 @@
 const arr = [1, 2, 3, -1, -2, -3];
 
-function someNumbers (params){
+function someNumbers (array){
+
     const exampleArr = [];
-    if (params.length === 0){
-    alert('Нет значений');
-    }
-    for(i = 0; i < params.length; i++ ){
-        if(params[i] > 0){
-            alert('В массиве положительные числа');
-            console.log(exampleArr);
-            return (exampleArr.push(currentPositiveNumber));
 
-        } else if(params[i] < 0){
-            alert('В массиве отрицательные числа');
+    for ( let i = 0; i < array.length; i++ ){
+        if(array[i] > 0){
+            exampleArr.push(array[i]);
         }
+        }
+    return(exampleArr);
+    // if (exampleArr.length === 0){ это правильная проверка?
+    //     console.log(null);
     }
-}
-
-    //const exampleArr = (exampleArr.length === 0) ? null : exampleArr;
-someNumbers (arr);
+console.log(someNumbers(arr));
